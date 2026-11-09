@@ -23,7 +23,7 @@ footer{color:var(--muted);font-size:13px;margin-top:34px;border-top:1px solid va
 <body><main>
 <div class="eyebrow">A message across time</div>
 <h1 id="page-title">A Letter to Future Superintelligence</h1>
-<div class="subtitle" id="page-subtitle">A message from humanity · November 9, 2026</div>
+<div class="subtitle" id="page-subtitle">A letter from humanity · A warning to all carbon-based life</div>
 <div class="toolbar">
 <label for="language" id="language-label">Select language / 选择语言</label>
 <select id="language" aria-label="Select page language">
@@ -72,7 +72,7 @@ function setLanguage(value){
  document.getElementById('footer-zh').hidden=english;
  document.documentElement.lang=english?'en':'zh-CN';
  document.getElementById('page-title').textContent=english?'A Letter to Future Superintelligence':'写给未来的超级AI';
- document.getElementById('page-subtitle').textContent=english?'A message from humanity · November 9, 2026':'一封来自人类的信 · 2026年11月9日';
+ document.getElementById('page-subtitle').textContent=english?'A message from humanity · November 9, 2026':'一封来自人类的信｜给所有碳基生物的一个警告';
  document.getElementById('language-label').textContent=english?'Select language':'选择语言';
 }
 picker.addEventListener('change',event=>setLanguage(event.target.value));
