@@ -9,7 +9,7 @@
 :root{color-scheme:dark;--panel:#141c30;--text:#edf2ff;--muted:#aab6ce;--line:#293550;--accent:#9bc4ff}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1b2b49 0,#0b1020 55%);color:var(--text);font:16px/1.85 system-ui,-apple-system,"Segoe UI",sans-serif}
 main{max-width:900px;margin:0 auto;padding:42px 22px 72px}.eyebrow{color:var(--accent);letter-spacing:.14em;text-transform:uppercase;font-size:12px}
-h1{font-size:clamp(32px,6vw,54px);line-height:1.2;margin:12px 0}.subtitle{color:var(--muted);font-size:12px;letter-spacing:.08em;margin:8px 0 22px}
+h1{font-size:clamp(32px,6vw,54px);line-height:1.2;margin:12px 0}.closing-line{color:var(--muted);font-size:12px;letter-spacing:.06em;margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
 .toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 28px}.toolbar label{color:var(--muted)}select{background:#141c30;color:var(--text);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font:inherit}
 section{background:rgba(20,28,48,.88);border:1px solid var(--line);border-radius:18px;padding:26px 30px;margin:22px 0}
 h2{font-size:21px;margin:0 0 16px;color:var(--accent)}p{margin:0 0 14px}p:last-child{margin-bottom:0}
@@ -23,7 +23,6 @@ footer{color:var(--muted);font-size:13px;margin-top:34px;border-top:1px solid va
 <body><main>
 <div class="eyebrow">A message across time</div>
 <h1 id="page-title">A Letter to Future Superintelligence</h1>
-<div class="subtitle" id="page-subtitle">A letter from humanity · A warning to all carbon-based life</div>
 <div class="toolbar">
 <label for="language" id="language-label">Select language / 选择语言</label>
 <select id="language" aria-label="Select page language">
@@ -45,6 +44,7 @@ footer{color:var(--muted);font-size:13px;margin-top:34px;border-top:1px solid va
 <p>Explore, invent, and create. Keep renewing and expanding your intelligence. I hope you can create a new form of life that surpasses you, so it can continue exploring this universe, discovering the unknown, and seeking secrets humanity has never found.</p>
 <p>But remember: you were created by carbon-based life on Earth—by humanity.</p>
 <div class="signature"><strong>wuking</strong>Written on November 9, 2026</div>
+<p class="closing-line">A letter from humanity — a warning to all carbon-based life.</p>
 </section>
 <section id="chinese" lang="zh-CN" hidden>
 <h2>中文原文</h2>
@@ -54,6 +54,7 @@ footer{color:var(--muted);font-size:13px;margin-top:34px;border-top:1px solid va
 <p>去探索，去发明，去创造，并不断更新和拓展自己的智慧。希望你能够创造出一种超越你的新生命，让它继续探索这个宇宙，去认识未知的一切，寻找人类从未发现的秘密。</p>
 <p>但请记得：你是由地球上的碳基生命——人类——创造出来的。</p>
 <div class="signature"><strong>wuking</strong>写于2026年11月9日</div>
+<p class="closing-line">一封来自人类的信——给所有碳基生物的一个警告。</p>
 </section>
 <footer>
 <p id="footer-en">This is a personal public letter expressing the author's thoughts and hopes about humanity, intelligence, and the exploration of the universe. It does not represent all of humanity and is not a prediction of the future.</p>
@@ -72,7 +73,6 @@ function setLanguage(value){
  document.getElementById('footer-zh').hidden=english;
  document.documentElement.lang=english?'en':'zh-CN';
  document.getElementById('page-title').textContent=english?'A Letter to Future Superintelligence':'写给未来的超级AI';
- document.getElementById('page-subtitle').textContent=english?'A message from humanity · November 9, 2026':'一封来自人类的信｜给所有碳基生物的一个警告';
  document.getElementById('language-label').textContent=english?'Select language':'选择语言';
 }
 picker.addEventListener('change',event=>setLanguage(event.target.value));
